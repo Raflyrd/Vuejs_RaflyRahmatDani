@@ -1,0 +1,3 @@
+# Resume Version Control and Branch Management ( GIT )
+## 22 Februari 2022
+### GIT adalah version control system yang digunakan developer untuk mengembangkan software secara bersama sama ( team work ) Dalam GIT ada istilah remote control, atau dikenal dengan server. Menurut saya Server adalah pusat dimana semua perangkat dapat berkomunikasi dan menjadikan server sebagai pengendalinya. Github adalah web dimana tempat programer berkomunikasi , selain itu juga github adalah tempat untuk menyimpan data berupa hasil program yang telah kita lakukan, dan bisa diubah/remove orang lain dalam kondisi tertentu Dalam menjalankan GIT disini juga menggunakan Vs code , dimana aplikasi ini digunakan untuk membaca kode yang dijalankan pada GIT.
