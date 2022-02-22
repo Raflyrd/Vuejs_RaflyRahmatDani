@@ -16,5 +16,5 @@ Tugas : Github </br>
 6. Buktikan dengan screenshot dari insight=> net work. Kumpulkan SS dan juga link dari repo kalian pada alta.id
 </div>
 Berikut Merupakan Output dari Praktikum ini :<a href="https://github.com/Raflyrd/Vuejs_RaflyRahmatDani"> Repository Tugas Praktikum </a></br>
-<img src="Screenshoot Insight.png"/>
+Output:<img src="https://user-images.githubusercontent.com/100126100/155172649-fed551c3-f7fe-483e-a158-558b5927a043.png"/>
 
