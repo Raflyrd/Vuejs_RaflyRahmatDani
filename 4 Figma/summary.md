@@ -1,4 +1,4 @@
-#Summary Figma
+# Summary Figma
 ##Figma adalah webiste yang membantu para editor dalam membuat desain grafik dan fitur prototype. Website ini bisa digunakan menggunakan sistem operasi windows dan macOS.
 ##Pada Figma untuk mengerjakan project atau sesuatu harus terhubung pada internet baik project personal maupun project team. Ketika offline maka tugas yang kita lakukan pada figma akan tetap berjalan tetapi perubahannya baru akan berjalan setelah online lagi.
 ##ada Figma tersedia banyak fitur , contohnya seperti fitur warna, kolom, layout, font yang dapat diedit oleh editor secara mudah dan figma juga menyediakan fitur prototype yang membantu editor agar membuat desain web yang membuat desain lebih nyata.
