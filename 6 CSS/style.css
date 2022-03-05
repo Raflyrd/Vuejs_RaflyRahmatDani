@@ -1,0 +1,145 @@
+#tampilan {
+    background-image : url("sample-pattern.png");
+    height: 610px;
+    
+}
+
+.header{
+    height: 40px;
+    background-color: white;
+}
+
+a {
+    padding-right: 20px;
+    text-decoration: none;
+}
+
+.menu {
+    float: right;
+    margin: 10px;
+    
+}
+
+.text-judul{
+    text-align: center;
+    padding-top: 20px;
+}
+
+.content{
+    padding-bottom: 50px;
+}
+
+.box{
+    position: absolute;
+    width: auto;
+    height: auto;
+    background-color: white;
+    top: 25%;  
+    left: 50%;
+    transform: translate(-50%, -50%);
+    /* top: 150px;
+    left: 220px; */
+    /* padding: 30px; */
+    
+}
+
+#tampilan-2{
+    margin-top: 20px;
+    background-image : url("sample-pattern.png");
+    height: 230px;
+}
+
+footer{
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align: center;
+}
+
+hr{
+    background-color: #ececec;
+    border: #ececec;
+    height: 2px;
+}
+
+h2{
+    padding: 0px 30px 0px 30px;
+    margin-top: 30px;
+    color: cornflowerblue;
+
+}
+
+p{
+    padding: 0px 30px 0px 30px;
+    margin-bottom: 40px;
+}
+
+
+
+/* Extra small devices (phones, 600px and down) */
+@media only screen and (max-width: 600px) {
+
+    img{
+        width: 30%;
+    }
+    .box{
+        width: 400px;
+        margin-top: 80%;
+    }
+
+    #tampilan {
+        height: 690px;
+        
+    }
+
+    #tampilan-2{
+        height: 280px;
+    }
+    
+}
+
+/* Small devices (portrait tablets and large phones, 600px and up) */
+@media only screen and (min-width: 600px) {
+    img{
+        width: 20%;
+    }
+    .box{
+        width: 500px;
+        margin-top: 62%;
+    }
+
+    #display {
+        height: 650px;
+        
+    }
+
+    #tampilan-2{
+        height: 250px;
+    }
+    
+}
+
+/* Medium devices (landscape tablets, 768px and up) */
+@media only screen and (min-width: 768px) {
+    img{
+        width: 15%;
+    }
+    .box{
+        width: 700px;
+        margin-top: 360px;
+    }
+
+    /* Extra large devices (large laptops and desktops, 1200px and up) */
+@media only screen and (min-width: 1200px) {
+
+    img{
+        width: 15%;
+    }
+
+    .box{
+        width: 900px;
+        margin-top: 23%;
+    }
+    }
+
+}
