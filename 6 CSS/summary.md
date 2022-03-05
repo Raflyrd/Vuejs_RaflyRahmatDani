@@ -45,3 +45,7 @@
 
 ## CSS Table
 ### Membuat style pada elemen table HTML
+
+
+# Output :![Screenshot (1)](https://user-images.githubusercontent.com/100126100/156889290-680ab7f8-d700-4c8f-bedf-0baa25e079bd.png)
+
