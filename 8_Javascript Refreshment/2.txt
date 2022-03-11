@@ -1,0 +1,5 @@
+//2.a = karena variabel let terlihat dideklarasikan sebagai false sedangkan  let terdaftar meminta proses return jika true
+
+//2.b = karena program menggunakan ( = ) yang mengartikan bahwa itu tahapan preferens sehingga terjadi error , seharusnya menggunakan ( == ) untuk membandingkan agar tetap dapat berjalan
+
+//2.c = dapat dieksekusi, karena variabel a dan b tidak terhubung dengan variabel asal yang berada pada baris 28.
