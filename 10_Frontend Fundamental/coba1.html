@@ -1,14 +1,19 @@
-<html>
+<!DOCTYPE html>
+<html lang="en">
     <head>
-        <Little>Jika Lebar Kurang Dari 600px</Little>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE-edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+       <title>Document</title>
+        <Little>Task Frontend Fundamental</Little>
     <style>
         .container {
-            display: flex;
-            flex-wrap: wrap;
+            display: grid;
         }
         .content {
-            height :50px;
-            width : 600px
+            height :200px;
+            width : 100%;
+            margin: 0px auto;
         }
         .red {
             background-color: red;
@@ -34,6 +39,23 @@
         .grey {
             background-color: grey;
 
+        }
+        @media screen and (max-width : 600px) {
+            .container {
+                grid-template-columns: auto;
+            }
+        }
+        @media screen and (min-width : 600px) {
+            .container {
+                grid-template-columns: auto auto;
+            }
+            
+        }
+        @media screen and (min-width: 960px) {
+            .container {
+                grid-template-columns: auto auto auto;
+            }
+            
         }
 
     </style>
