@@ -1,0 +1,35 @@
+<html>
+  <head>
+    <title>Belajar Vue Fundamental</title>
+  </head>
+    <body>
+    <div id="app">
+        <ol>
+            <li v-for="list in listtask" :key="list">
+                {{ listtask }}
+            </li>
+        </ol>
+        <input type="text" name="value" v-model.lazy="listtask" />
+        <button v-on:click="addList">Tambahkan</button>
+        <div v-if="listtask.length > 3">HEBAT!!!</div>
+    </div>
+    
+    <script src="https://cdn.jsdelivr.net/npm/vue@2/dist/vue.js"></script>
+    <script>
+        const toDo = {
+            el: '#app',
+        data() {
+            return {
+                listtask : [],
+            }
+        },
+          methods: {
+              addList(value) {
+                  this.listtask.push(value)
+              }
+          }
+        }
+        var app = new Vue(toDo)
+    </script>
+  </body>
+</html>
