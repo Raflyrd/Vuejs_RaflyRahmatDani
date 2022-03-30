@@ -1,42 +1,78 @@
 <template>
-  <div id="App">
-        <ol>
-            <li v-for="todo in todos" :key="todo.id">
-                {{ todo }}
-            </li>
-        </ol>
-        <input type="text" v-model="newTodo">
-        <button v-on:click="addTodo">Tambahkan</button>
-        <p v-if="todos.length >= 4">Hebat!</p>
+  <div class="app">
+    <h2>Todo List</h2>
+    <div class="taskList">
+      <div
+        class="taskItem"
+        v-for="(taskItem, indexItem) in tasks"
+        :key="indexItem"
+      >
+        <TaskItem
+          :task="taskItem"
+          :index="indexItem"
+          @edit-task="editTask"
+          @delete-task="deleteTask"
+        />
+      </div>
+    </div>
+    <div class="userInput">
+      <input type="text" v-model="currentTask" />
+      <div class="inputButton">
+        <button @click="addTask">Tambahkan</button>
+      </div>
+    </div>
+    <div v-if="tasks.length > 3" class="messages">Hebat!</div>
   </div>
 </template>
 
 <script>
+import TaskItem from "@/components/Task.vue";
+import TaskItem from ""
+
 export default {
-  name: "App",
+  name: "app",
+  components: {
+    TaskItem,
+  },
   data() {
-    return{
-      NewTodo: "",
-      todos: [],
+    return {
+      tasks: [],
+      currentTask: "",
     };
   },
   methods: {
-    addTodo() {
-      this.todos.push(this.newTodo);
-       this.newTodo = "";
+    addTask() {
+      this.tasks.push(this.currentTask);
+      this.currentTask = "";
+    },
+    editTask({ index, task }) {
+      this.tasks[index] = task;
+      this.tasks = this.tasks.map((currentTask, currentIndex) => {
+        if (currentIndex === index) {
+          return task;
+        }
+        return currentTask;
+      });
+    },
+    deleteTask(index) {
+      this.tasks = this.tasks.filter(
+        (_, currentIndex) => currentIndex !== index
+      );
     },
   },
 };
 </script>
 
-
-<style>
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
+<style scoped>
+.userInput {
+  width: 100%;
+  display: flex;
+}
+input {
+  width: 80%;
+}
+.inputButton {
+  width: 20%;
   text-align: center;
-  color: #2c3e50;
-  margin-top: 60px;
 }
 </style>
