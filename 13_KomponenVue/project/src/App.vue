@@ -27,7 +27,10 @@
 
 <script>
 import TaskItem from "@/components/Task.vue";
+<<<<<<< HEAD
 import TaskItem from ""
+=======
+>>>>>>> a8d5f87cdc9ef6c814721455bc5c8afaa3e27fc1
 
 export default {
   name: "app",
