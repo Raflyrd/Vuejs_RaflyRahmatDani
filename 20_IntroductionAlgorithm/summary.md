@@ -18,3 +18,5 @@
 
 ## Flowchart 
 ### Suatu bagian dengan dimbol tertentu yang mengambarkan urutan dan hubungan antar proses secara mendetail.
+
+<img src="./screenshoot.png/flowchart.png"/>
