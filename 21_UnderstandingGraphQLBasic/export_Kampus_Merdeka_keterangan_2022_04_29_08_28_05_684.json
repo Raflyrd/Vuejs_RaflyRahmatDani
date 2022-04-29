@@ -1,0 +1,44 @@
+[
+  {
+    "id": 1,
+    "id_anggota": 1,
+    "pelajaran": "Sistem Informasi",
+    "nilai": 85,
+    "Status": true
+  },
+  {
+    "id": 2,
+    "id_anggota": 1,
+    "pelajaran": "React",
+    "nilai": 65,
+    "Status": false
+  },
+  {
+    "id": 3,
+    "id_anggota": 2,
+    "pelajaran": "Sistem informasi",
+    "nilai": 90,
+    "Status": true
+  },
+  {
+    "id": 4,
+    "id_anggota": 2,
+    "pelajaran": "React",
+    "nilai": 50,
+    "Status": false
+  },
+  {
+    "id": 6,
+    "id_anggota": 3,
+    "pelajaran": "Sistem Informasi",
+    "nilai": 90,
+    "Status": true
+  },
+  {
+    "id": 7,
+    "id_anggota": 3,
+    "pelajaran": "React",
+    "nilai": 55,
+    "Status": false
+  }
+]

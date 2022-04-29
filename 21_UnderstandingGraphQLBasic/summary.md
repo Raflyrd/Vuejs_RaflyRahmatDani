@@ -11,3 +11,11 @@
 
 ## Heroku
 ### Heroku is a cloud platform as a service supporting several programming languages.
+
+## Berikut Hasil Pada Praktikum Ini :
+
+<img src="./screenshoot.png/Hasurabasic.png"/>
+<img src="./screenshoot.png/Screenshot (328).png"/>
+<img src="./screenshoot.png/Screenshot (329).png"/>
+<img src="./screenshoot.png/Screenshot (330).png"/>
+<img src="./screenshoot.png/Screenshot (331).png"/>
