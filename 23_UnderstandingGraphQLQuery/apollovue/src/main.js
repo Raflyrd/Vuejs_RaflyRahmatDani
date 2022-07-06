@@ -10,7 +10,7 @@ Vue.config.productionTip = false
 
 const httpLink = createHttpLink({
   // You should use an absolute URL here
-  uri: 'https://expert-antelope-43.hasura.app/v1/graphql',
+  uri: 'https://flowing-kingfish-74.hasura.app/v1/graphql',
 })
 
 // Cache implementation

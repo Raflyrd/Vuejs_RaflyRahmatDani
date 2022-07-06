@@ -1,59 +1,48 @@
 <template>
   <div>
-    <h1>My Todo List</h1>
+    <h1>Todo List</h1>
     <div class="todo-form">
       <form @submit.prevent="OnSubmit">
-        <input  v-model="id" name="todo" placeholder="todo-name">
+        <input  v-model = "newTodo" name="todo" placeholder="todo-name">
           <button>Add New Todo</button>
       </form>
     </div>
     <div>
       {{ gql }}
     </div>
-
-    <!-- Tabel 1 -->
+    <!-- <ApolloQuery
+    :query="gql => gql(`
+      query {
+        todolist_list {
+        id
+        list
+      }
+    }
+    `)"
+    > -->
 
     <div class="todo-list">
-    <ul v-if="this.id==''">
-    <li v-for="(todo, index) in Alltodos" :key="todo.id" class="todo">
+    <ul>
+    <li v-for="(todo,index) in Alltodos" :key="index" class="todo">
         <div class="content">
-          <h3>{{todo.id}}</h3>
+          <h3>{{todo}}</h3>
         </div>
         <div class="content">
           <button class="far fa-times-circle fa-2x" @click="Completed(index)">x</button>
         </div>
       </li>
   </ul>
-  <ul v-else>
-    <li class="todo">
-      <div class="content">
-        <h3>{{todolist_by_pk.id}}</h3>
-      </div>
-      <div class="content">
-        <h3>{{todolist_by_pk.text}}</h3>
-      </div>
-    </li>
-  </ul>
-
-<!-- Tabel 2 -->
-<hr>
-
-
+  <hr>
   <ul>
-    <li v-for= "todo in todolist" :key="todo.id" class="todo">
+    <li v-for="todo in todolist_list" :key="todo.id" class="todo">
         <div class="content">
-          <h3>{{todo.id}}</h3>
-        </div>
-        <div class="content">
-          <h3>{{todo.text}}</h3>
+          <h3>{{todo.id}}. {{todo.List}}</h3>
         </div>
         <div class="content">
           <button class="far fa-times-circle fa-2x" @click="Completed(index)">x</button>
         </div>
       </li>
   </ul>
-    
-
 </div>
   </div>
 </template>
@@ -61,44 +50,28 @@
 <script>
 import gql from 'graphql-tag'
 
-const get_Alltodos = gql`
-  query getAlltodos {
-    todolist{
-      id
-      text
+const GET_ALL_TODOS = gql`
+query GET_ALL_TODOS {
+  todolist_list {
+    id
+    List
     }
-  }`;
+  }
+`
 
-const get_Alltodos_id = gql`
-  query getAlltodos($id: Int!){
-    todolist_by_pk(id: $id){
-        id
-        text
-      }
-    }`;
-    
 export default {
-  data() {
-    return {
-            id: "",
-            newTodo: "",
-            Alltodos: [],
-          }
-  },
-  apollo:{
-    todolist:{
-      query: get_Alltodos
-    },
-    todolist_by_pk:{
-      query: get_Alltodos_id,
-      variables(){
-        return{
-          id: this.id,
-        };
-      },
+  apollo: {
+    todolist_list: {
+      query: GET_ALL_TODOS
     },
   },
   components : {
+  },
+  data() {
+    return {
+            newTodo: "",
+            Alltodos: [],
+          }
   },
   methods: {
     OnSubmit(){
@@ -167,9 +140,5 @@ i{
   cursor: pointer;
   color: red;
 }
-
-table, tr, td{
-  border: 1px solid black;
-  width: 50%;
-}
 </style>
+
